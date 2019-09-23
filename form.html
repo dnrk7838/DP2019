@@ -5,6 +5,8 @@
     </head>
     <body>
         <!-- 회원가입 양식지 만들기 -->
+        <h1>회원가입</h1>
+        <hr />
         <from>
             <label for="f1">아이디</label>
             <input type="text" name="f1" placeholder="아이디를 입력하세요" />
@@ -37,10 +39,23 @@
             <label for="f4">핸드폰번호</label>
             <input type="f4" placeholder="핸드폰번호를 입력하세요 " />
             <br>
+            <input type="button" onclick="alert('인증번호를 전송했습니다.')"value="인증번호 발급" />
+            <label for="13">인증번호</label>
+            <input type="text" name="f12" placeholder="인증번호를 입력하세요" />
+            <br>
             <textarea cols="30" rows="5"></textarea>
             <br>
             <br>
-            </textarea>
+            <label for="f13">이메일</label>
+            <input type="text" name="f14" placeholder="이메일 입력" />
+            <label for="f15">@</label>
+            <select>
+                    <option> 사이트 선택 </option>
+                    <option> naver.com </option>
+                    <option> google.com </option>
+                </textarea>
+                <br>
+                <br>
             <input type="button" onclick="alert('회원가입 완료')" value="회원가입" />
             <br>
             <a href="index.html">돌아가기</a>
