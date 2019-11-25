@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자유레이아웃</title>
+        <meta charset="utf-8" />
+        <style>
+            header{
+                background-color: #2b2b2b;
+                color: white; /* 글자색은 상속 됩니다. */
+                padding: 10px 50px; /* 상하 좌우 */
+            }
+            header>h1>span:nth-child(2){
+                color: #ffffff;
+            }
+            header>h1{
+                margin: 0px;
+            }
+            body{
+                margin: 0px;
+            }
+            header>nav>ul{
+                margin: 12px 0px; /* 상하 좌우 */
+            }
+            header>nav>ul>li{
+                float: left;
+                list-style: none;
+                padding: 0px 10px; /* 상하 좌우 */
+            }
+
+            #wrap{
+                min-width: 1000px;
+                max-width: 1920px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .clear{
+                clear: both; /* float을 해제한다 */
+                height: 0px; /* 높이 : 0; */
+                overflow: hidden; /*  넘치면: 숨김; */
+            }
+            .float_left{
+                float: left;
+            }
+            .float_right{
+                float: right;
+            }
+            #main_visual{
+                /* height: 400px;*/
+                background-image: url("IMAGES/samsung.jpg");
+                background-size: 100% auto; /* 가로 세로 */
+                background-size: cover; /* 표지 처럼 */
+                background-repeat:no-repeat; /*반복 방식 */
+                /* repeat, no-repeat, repeat-x, repeat-y */
+                background-color: black;
+                background-position: 50% 50%; /* 가로 세로*/
+
+                color: white;
+                text-align: center;
+                padding: 150px 0px; /* 상하 좌우 */
+            }
+            #main_visual>h2{
+                font-size: 35px;
+                letter-spacing: 5px;
+                margin: 8px 0px; /* 상하 좌우 */
+            }
+            #top_title{
+                font-size: 25px;
+            }
+            #bottom_title{
+                font-size: 20px;
+            }
+            #buttom_container{
+                margin-top: 100px;
+            }
+            section{
+                text-align: center;
+            }
+            section>h3{
+                color: #3a3a3a;
+                margin: 15px 0px; /* 상하 좌우 */
+            }
+            section>p{
+                margin: 30px 0px; /* 상하 좌우 */
+                padding: 0px 100px; /* 상하 좌우 */
+            }
+            section>#about_list>li{
+                float: left;
+                list-style: none;
+                width: 25%; /*100 / 4 = 25 */
+                width: calc(25% - (1px / 4 * 3) - 25px - 25px);
+
+                border-right: solid 1px #ccc;
+                padding: 25px;
+            }
+            section>#about_list>li:nth-child(4){
+                border: none;
+            }
+            section #about_list{
+                padding: 0px 80px; /* 상하 좌우 */
+            }
+            section dd{
+                margin: 0px;
+            }
+            section>#work_list{
+                padding: 0px;
+                margin: 0px;
+            }
+            section>#work_list>li{
+                float: left;
+                list-style: none;
+                width: 25%;
+            }
+            section>#work_list img{
+                width: 100%; /* 내가 쓸수 있는 공간 */
+                display: inline; /* 기본 = 인라인 */
+                display: block; /* 출력방식: 블록 */
+            }
+        </style>
+    </head>
+    <body>
+                <div id="wrap">
+                <header>
+                    <h1 class="float_left">
+                        <span>SAM</span><span>SUNG</span>
+                        <!-- div span 의미를 가지고 있지 않은 구획 나누기 -->
+                        </h1>
+                     <nav class="float_right">
+                        <ul>
+                            <li>HOME</li>
+                            <li>ABOUT SAMSUNG</li>
+                             <li>SAMSUNG PRODUCTS</li>
+                            <li>SAMSUNG A/S</li>
+                            <li>Customer Service</li>
+                            <div class="clear"></div>
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                    </header>                       
+                     <div id="main_visual">
+                        <div id="top_title">
+                            HOW TO LIVE SMART?
+                        </div>
+                        <h2>
+                            SAMSUNG Galaxy Fold
+                        </h2>
+                        <div id="bottom_title">
+                            A NEW START
+                        </div>
+                        <div id="buttom_container">
+                            <img src="IMAGES/무제-1.png"/>
+                         </div>
+                        </div>
+                        <section>
+                            <h3>ABOUT SAMSUNG</h3>
+                            <P>
+                                    A business group with Samsung C&T as its parent company. The group's main businesses
+                                    are electronics, bio, heavy industries, construction, finance and services. Samsung Group
+                                    is a governance structure that leads to Chairman Lee Kun-hee → Samsung C&T → Samsung Life Insurance → Samsung Electronics.
+                                    The company that effectively controls Samsung Group is Samsung C&T, which started
+                                    as the Samsung Corporation in March 1938, and its flagship unit is Samsung Electronics. Samsung Group is currently the No.
+                                    1 business group in Korea in 2017, while Samsung Electronics is the only Korean company
+                                    to be listed as one of the top 100 companies in the world.
+                            </P>
+                            <ul id="about_list">
+                                <li>
+                                    <img src="IMAGES/무제-2.png"/>
+                                    <dl>
+            
+                                     <dt>Building</dt>
+                                        <dd>
+                                                High-definition display with a wide range of air conditioning,
+                                                lighting products, and effective 
+                                                information management to complete optimal building space
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                <img src="IMAGES/무제-2.png"/>
+                                <dl>
+                                    <dt>Work</dt>
+                                    <dd>
+                                            IT products that increase efficiency
+                                            and productivity in the workplace and
+                                            provide strong office security
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                            <img src="IMAGES/무제-2.png"/>
+                                <dl>
+                                    <dt>Title goes here</dt>
+                                    <dd>
+                                            Mobile products enable unrestricted
+                                            business environments anytime, anywhere
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <img src="IMAGES/무제-2.png"/>
+                                <dl>
+                                    <dt>Title goes here</dt>
+                                    <dd>
+                                            Best products for your business,
+                                            custom solutions for your customers,
+                                            Business-specialized, integrated services                                            
+                                            Achieve business success for your customers
+                                    </dd>
+                                </dl>
+                            </li>
+                            <div class="clear"></div>
+                            </ul>
+                        </section>
+                        <section>
+                            <h3>Address</h3>
+                            <P>
+                                    Copyright © 1995-2019 SAMSUNG All Rights Reserved.
+                                    Samsung-ro, Yeongtong-gu, Gyeonggi Province, 129 (Matan-dong) CEO of Samsung Electronics Co., Kim Ki-nam,
+                                    a business license number 124-81-00998 Operator's information verification communication
+                                    sales business: 2000-Gyeonggi Suwon-0515 Hosting service provider: Samsung SDI Co.
+                                    Representative number: 02-2255-0114 Fax: 02-2255-0117 Product/Service: 1588-3366 Inquiry: 1588-6084
+                                    Samsung Electronics Co., Ltd. is not a party to communication sales as a communication
+                                    sales broker and is not responsible for the transaction information and transactions registered by
+                                    individual sellers. Content on this Site is protected by copyright law and prohibited
+                                    from unauthorized reproduction, copying, or distribution.
+                            </P>
+                            <ul id="work_list">
+                                    <li><img src="IMAGES/layout2_pic1.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic2.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic3.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic4.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic5.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic6.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic7.jpg"></li>
+                                    <li><img src="IMAGES/layout2_pic8.jpg"></li>
+                                    <div class="clear"></div>
+                                </ul>
+                        </section>
+                    </div>
+                    <form>
+                            <a href="index.html">SAMSUNG MAIN</a>
+                    </form>
+    </body>
+</html>
